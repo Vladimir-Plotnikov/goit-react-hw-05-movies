@@ -1,10 +1,19 @@
 import { Suspense, useEffect, useState } from "react";
-import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import { getMovieById } from "services/movieApi";
 import defaultPicture from '../../images/default-movie.jpeg'
 import { Notification } from "components/Notification/Notification";
 import { Hearts } from "react-loader-spinner";
-import { AdditionalInfo, Container, Genre, GenreWrapper, MovieWrapper, NavItem, Section, Title } from "./MoviesDetails.styled";
+import {
+    AdditionalInfo,
+    Container,
+    Genre,
+    GenreWrapper,
+    MovieWrapper,
+    NavItem,
+    Section,
+    Title
+} from "./MoviesDetails.styled";
 
 const Status = {
     IDLE: 'idle',
