@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Section = styled.section`
+display: flex;
   padding-top: 36px;
   padding-bottom: 36px;
   text-align: center;

@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import defaultPicture from '../../images/default-movie.jpeg';
-import {Image, Item} from '../MovieList/MovieList.styled'
+import {Image, Item, MovieTitle} from '../MovieList/MovieList.styled'
 
 export const MovieList = ({ items }) => {
   const location = useLocation();
@@ -18,9 +18,9 @@ export const MovieList = ({ items }) => {
               }
               alt={title}
             />
-            <div>
+            <MovieTitle>
               <p>{title}</p>
-            </div>
+            </MovieTitle>
           </Item>
         </li>
       ))}

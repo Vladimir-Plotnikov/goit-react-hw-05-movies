@@ -6,6 +6,10 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
+const MovieTitle = styled.div`
+display: flex;
+`
+
 const Item = styled(NavLink)`
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -16,4 +20,4 @@ const Item = styled(NavLink)`
   }
 `;
 
-export{Image, Item}
+export{Image, Item, MovieTitle}
