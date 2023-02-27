@@ -1,14 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "pages/Home/Home";
-import Movies from "pages/Movies/Movies";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
-import MoviesDelails from "pages/MoviesDetails/MoviesDetails";
-import Reviews from "./components/Reviews/Reviews";
-import Cast from "./components/Cast/Cast";
 import { GlobalStyle } from "GlobalStyle";
 
-// import About from "path/to/pages/About"
-// import Products from "path/to/pages/Products"
+import Home from "pages/Home/Home";
+import Movies from "pages/Movies/Movies";
+import MoviesDelails from "pages/MoviesDetails/MoviesDetails";
+
+import Reviews from "./components/Reviews/Reviews";
+import Cast from "./components/Cast/Cast";
 
 export const App = () => {
   return (
@@ -22,6 +21,7 @@ export const App = () => {
             <Route path="cast" element ={<Cast/>}/>
             <Route path="reviews" element ={<Reviews/>}/>
           </Route>
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
         </Routes>
     </div>
